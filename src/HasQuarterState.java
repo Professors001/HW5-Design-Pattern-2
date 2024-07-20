@@ -34,4 +34,4 @@ public class HasQuarterState implements State {
         System.out.println("No gumball dispensed");
     }
 }
-//6510451085 อภิสิทธิ์ ประเสริฐเวศยากร
+//6510451085 Aphisit Prasertvesyakorn

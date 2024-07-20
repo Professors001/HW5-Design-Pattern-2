@@ -4,6 +4,7 @@ public class GumballMachine {
     State hasQuarterState;
     State soldState;
     State winnerState;
+    State chooseState;
 
     State state;
     int gumballCount = 0;
@@ -15,13 +16,14 @@ public class GumballMachine {
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         winnerState = new WinnerState(this);
+        chooseState = new ChooseState(this);
+
         this.gumballCount = numberGumballs;
         if (numberGumballs <= 0) {
             state = soldOutState;
         } else {
             state = noQuarterState;
         }
-        flavor = "";
         System.out.println("Mighty Gumball, Inc.");
         System.out.println("Java-enabled Standing Gumball Model #2004");
         System.out.println("Inventory: " + gumballCount + " Gumballs");
@@ -37,7 +39,7 @@ public class GumballMachine {
 
     public void choose(String flavor) {
         this.flavor = flavor;
-        System.out.println("You have chosen the flavor " + flavor);
+        state.choose();
     }
 
     public void turnCrank() {
@@ -78,6 +80,10 @@ public class GumballMachine {
 
     State getWinnerState() {
         return winnerState;
+    }
+
+    State getChooseState() {
+        return chooseState;
     }
 
     int getGumballCount() {

@@ -3,5 +3,6 @@ public interface State {
     public void ejectQuarter();
     public void turnCrank();
     public void dispense();
+    public void choose();
 }
 //6510451085 Aphisit Prasertvesyakorn

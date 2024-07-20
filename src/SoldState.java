@@ -25,5 +25,10 @@ public class SoldState implements State {
             gumballMachine.setState(gumballMachine.getSoldOutState());
         }
     }
+
+    public void choose() {
+        System.out.println("Sorry, you already turned the crank");
+    }
+
 }
 //6510451085 Aphisit Prasertvesyakorn

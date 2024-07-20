@@ -21,5 +21,9 @@ public class SoldOutState implements State {
         System.out.println("You need to pay first");
     }
 
+    public void choose() {
+        System.out.println("Sorry, you already turned the crank");
+    }
+
 }
 //6510451085 Aphisit Prasertvesyakorn

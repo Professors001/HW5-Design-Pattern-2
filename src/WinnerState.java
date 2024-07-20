@@ -32,5 +32,9 @@ public class WinnerState implements State {
             }
         }
     }
+
+    public void choose() {
+        System.out.println("You haven't inserted a quarter Yet!");
+    }
 }
 //6510451085 Aphisit Prasertvesyakorn
